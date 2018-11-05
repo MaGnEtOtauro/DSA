@@ -1,0 +1,39 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+int a[12]={5,7,9,13,23,27,29,37,41,47,53,55};
+    int i,count,n,l,m,r;
+    count=12;
+for (i=0; i<count; i++)
+{
+}
+cout<<"Enter the number that you want to search here:"; 
+        cin>>n;
+l = 0;
+r = count-1;
+m = (l+r)/2;
+while (l <= r)
+{
+   if(a[m] < n)
+   {
+l = m + 1;
+
+   }
+   else if(a[m] == n)
+   {
+cout<<n<<" found in the array at the location of "<<m<<"\n"; 
+                break; 
+           } 
+           else { 
+                r = m - 1; 
+           } 
+           m = (l + r)/2; 
+        } 
+        if(l > r)
+{
+   cout<<n<<" not found in the array";
+}
+return 0;
+}
